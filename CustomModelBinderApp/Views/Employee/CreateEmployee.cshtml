@@ -1,0 +1,69 @@
+﻿@model CustomModelBinderApp.Models.Employee
+
+
+
+<div class="container-fluid">
+
+    
+
+    @using (Html.BeginForm("CreateEmployee", "Employee", FormMethod.Post))
+    { 
+        <div class="row">
+            <h2> Create Employee </h2>
+        </div>
+
+        <div class="row m-3">
+
+            <div class="col-4 ">
+                <label class="form-check-label">Name </label>
+            </div>
+            <div class="col-6">
+                <input type="text" name="Name" class="form-control-sm " />
+            </div>
+        </div>
+
+        <div class="row m-3">
+
+            <div class="col-4">
+                <label class="form-check-label">D No </label>
+            </div>
+            <div class="col-6">
+                <input type="text" name="DoorNum" class="form-control-sm " />
+            </div>
+        </div>
+
+        <div class="row m-3">
+            <div class="col-4">
+                <label class="form-check-label">Street/Location </label>
+            </div>
+            <div class="col-6">
+                <input type="text" name="Street" class="form-control-sm " />
+            </div>
+        </div>
+
+
+        <div class="row m-3">
+            <div class="col-4">
+                <label class="form-check-label">Place </label>
+            </div>
+            <div class="col-6">
+                <input type="text" name="Place" class="form-control-sm " />
+            </div>
+
+        </div>
+
+        <div class="row m-3">
+            <div class="col-4">
+
+            </div>
+            <div class="col-6">
+                <input type="submit" value="Create" class="btn btn-success" />
+                <a class="btn btn-danger" href="@Url.Action("Index","Employee")">  Cancel </a>
+            </div>
+
+        </div>
+    }
+</div>
+
+
+
